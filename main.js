@@ -1,42 +1,44 @@
 //----------------//
 // C is for Cookie
 //----------------//
+////---fixed scope by changing y=1 to x==1 and changed all y's to x's
 const cookies = ["Oatmeal Raisin", "Chocolate Chip", "Sugar", "Peanut Butter", "Snickerdoodle", "Ginger"]
-let y = 1
+let x = 1
 
-for (let x = 1; y < cookies.length; x++) {
-    const currentCookie = cookies[y]
+for (let x = 1; x < cookies.length; x++) {
+    const currentCookie = cookies[x]
     console.log(`Mmmmmmm... that's a good ${currentCookie} cookie`)
 }
 
 //----------------//
 // Conjunction Function
 //----------------//
+////---added console.log inside function to call created string from function 
 const conjunction = function (firstWord, secondWord) {
     const conjoinedWord = `${firstWord} ${secondWord}`
+    console.log(conjoinedWord)
 }
 
 conjunction("Master", "Card")
-console.log(conjoinedWord)
+console.log(conjunction);
 
 //----------------//
 // Mod Squad
 //----------------//
-{
-    const ModSquad = {
-        "members": ["Pete Cochran", "Linc Hayes", "Julie Barnes", "Capt. Adam Greer", "Chief Barney Metcalf"]
-        "series": {
-            "start": "1968",
-            "end": "1973"
-        }
+////---fixed syntax
+const ModSquad = {
+    'members': ["Pete Cochran", "Linc Hayes", "Julie Barnes", "Capt. Adam Greer", "Chief Barney Metcalf"],
+    'series': {'start': "1968", 'end': "1973"}
     }
+    
+////---switched from const to let inorder to change value
+let HTMLRepresentation = `<h1>The Mod Squad</h1>`
 
-    const HTMLRepresentation = `<h1>The Mod Squad</h1>`
+////--- removed const since HTMLRepresentation already declared above
+ModSquad.members.forEach(member => {
+    HTMLRepresentation += `<div>${member}</div>`
+})
 
-    ModSquad.members.forEach(member => {
-        const HTMLRepresentation += `<div>${member}</div>`
-    })
-}
 
 document.querySelector(".show-info").innerHTML = HTMLRepresentation
 
@@ -45,8 +47,9 @@ document.querySelector(".show-info").innerHTML = HTMLRepresentation
 //----------------//
 const locations = [[1,1], [1,2], [1,3], [2,1], [2,2], [2,3]]
 
-for (let k = 0; k < locations.length; k++) {
+for (var k = 0; k < locations.length; k++) {
     const currentLocation = locations[k]
+    let invalidLocation;
 
     if (currentLocation[0] > 2) {
         const invalidLocation = true
@@ -66,12 +69,9 @@ const llamaNamer = function () {
     const possibleNames = ["Larry", "Leon", "Leona", "Les", "Laura", "Lemony", "Lars", "Lekisha"]
     const randomizer = Math.floor(Math.random() * 7)
 
-    const namer = function () {
         const suffix = " the Llama"
         const name = possibleNames[randomizer]
-    }
-
-    return name + suffix
+        return name + suffix
 }
 
 nameMaker = llamaNamer()
