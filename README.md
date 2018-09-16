@@ -1,7 +1,10 @@
-Scope Exercises
+# Scope Exercises
+## Book 2 Chapter 7: Scope in Javascript 
+
 Some software developers were contracted to build some code, but there weren't quite clear yet on how scope works. Your job to fix their code to stop all the error from being thrown.
 
-C is for Cookie
+### C is for Cookie
+```
 const cookies = ["Oatmeal Raisin", "Chocolate Chip", "Sugar", "Peanut Butter", "Snickerdoodle", "Ginger"]
 let y = 1
 
@@ -9,14 +12,20 @@ for (let x = 1; y < cookies.length; x++) {
     const currentCookie = cookies[y]
     console.log(`Mmmmmmm... that's a good ${currentCookie} cookie`)
 }
-Conjunction Function
+```
+
+### Conjunction Function
+```
 const conjunction = function (firstWord, secondWord) {
     const conjoinedWord = `${firstWord} ${secondWord}`
 }
 
 conjunction("Master", "Card")
 console.log(conjoinedWord)
-Mod Squad
+```
+
+### Mod Squad
+```
 {
     const ModSquad = {
         "members": ["Pete Cochran", "Linc Hayes", "Julie Barnes", "Capt. Adam Greer", "Chief Barney Metcalf"]
@@ -34,7 +43,10 @@ Mod Squad
 }
 
 document.querySelector(".show-info").innerHTML = HTMLRepresentation
-Simon Says
+```
+
+### Simon Says
+```
 const locations = [[1,1], [1,2], [1,3], [2,1], [2,2], [2,3]]
 
 for (let k = 0; k < locations.length; k++) {
@@ -50,7 +62,10 @@ for (let k = 0; k < locations.length; k++) {
 }
 
 console.log(`There were ${k} locations displayed`)
-Lambda Llama
+```
+
+### Lambda Llama
+```
 const llamaNamer = function () {
     const possibleNames = ["Larry", "Leon", "Leona", "Les", "Laura", "Lemony", "Lars", "Lekisha"]
     const randomizer = Math.floor(Math.random() * 7)
@@ -65,3 +80,9 @@ const llamaNamer = function () {
 
 nameMaker = llamaNamer()
 console.log(nameMaker())
+```
+
+## Run Program
+1. open in code editor 
+2. launch in browser
+3. view console in dev tools 
